@@ -1,8 +1,11 @@
 import Debug "mo:base/Debug";
 
 actor DBank{
-  var currentValue = 300;
-  currentValue := 100;
+  stable var currentValue: Nat = 300;
+  // currentValue := 100;
+
+  let id = 0293042834234;
+  // Debug.print(debug_show(id));
 
   public func topUP(amount: Nat){
     currentValue += amount;
